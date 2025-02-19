@@ -9,16 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="discovery" />
+        <module name="gateway" />
       </profile>
-      <profile name="Annotation profile for customer" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+      <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.36/5a30490a6e14977d97d9c73c924c1f1b5311ea95/lombok-1.18.36.jar" />
         </processorPath>
-        <module name="customer" />
       </profile>
       <profile name="Annotation profile for product" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -27,15 +24,27 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
         </processorPath>
+        <module name="notification" />
         <module name="product" />
+        <module name="payment" />
+        <module name="order" />
+        <module name="customer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="payment.main" target="21" />
+      <module name="payment.test" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="config-server" options="-parameters" />
       <module name="customer" options="-parameters" />
       <module name="discovery" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="notification" options="-parameters" />
+      <module name="order" options="-parameters" />
+      <module name="payment" options="-parameters" />
       <module name="product" options="-parameters" />
     </option>
   </component>

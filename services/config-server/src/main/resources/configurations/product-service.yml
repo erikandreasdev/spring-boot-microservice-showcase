@@ -1,12 +1,9 @@
 server:
   port: 8050
 spring:
-  config:
-    import:
-
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/dbx
+    url: jdbc:postgresql://localhost:5432/product
     username: ux
     password: px
   jpa:
